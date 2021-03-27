@@ -135,8 +135,8 @@ Examples:
 */
 
 function extractKey(arr, key) {
-  return arr.map(function (obj) {
-    return obj[key]; //this accesses the VALUE of an object
+  return arr.map(function (val) {
+    return val[key]; //this accesses the VALUE of an object
   });
 }
 
@@ -148,8 +148,8 @@ Examples:
 */
 
 function extractFullName(arr) {
-  return arr.map(function (obj) {
-    return obj.first + ' ' + obj.last;
+  return arr.map(function (val) {
+    return val.first + ' ' + val.last;
     // OR
     //return obj['first'] + ' ' + obj['last'];
   });
@@ -166,8 +166,8 @@ function filterByValue(arr, key) {
   //   return arr.filter(function (key) {
   //     return key.isCatOwner === true;
   //   });
-  return arr.filter(function (value) {
-    return value[key] !== undefined;
+  return arr.filter(function (val) {
+    return val[key] !== undefined;
   });
 }
 
@@ -193,8 +193,8 @@ Examples:
 */
 
 function findInObj(arr, key, searchValue) {
-  return arr.filter(function (obj) {
-    return obj[key] === searchValue;
+  return arr.filter(function (val) {
+    return val[key] === searchValue;
   })[0];
 }
 
